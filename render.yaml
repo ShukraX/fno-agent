@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fno-agent-studio
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DISABLE_LLM
+        value: "1"
+      - key: RENDER
+        value: "1"
